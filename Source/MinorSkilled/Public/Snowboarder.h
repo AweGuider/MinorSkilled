@@ -120,8 +120,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Custom")
 		float SnowboardRotationInterpSpeed;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Custom")
-		float LineTraceLength;
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Custom")
@@ -163,4 +161,10 @@ protected:
 	// Change to BlueprintReadOnly in later stages, keep for now for showcase
 	UPROPERTY(BlueprintReadWrite, Transient, Category = "Physics")
 		FVector NewVelocity;
+
+private:
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Custom", meta = (AllowPrivateAccess = "true"))
+		float LineTraceLength;
 };
+

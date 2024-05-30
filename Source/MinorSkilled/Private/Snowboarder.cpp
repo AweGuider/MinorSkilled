@@ -44,6 +44,8 @@ void ASnowboarder::CalculateVelocity(FVector CurrentVelocity)
 	DrawDebugArrowInDirection(GravityForce.GetSafeNormal(), GravityForceColor, DebugGravityForce);
 
 	//UE_LOG(LogTemp, Warning, TEXT("Gravity: %s"), *GravityForce.ToString());
+	//if (GEngine)
+		//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("World delta for current frame equals %f"), GetWorld()->TimeSeconds));
 
 	FVector SnowboardNormalCross = SnowboardForwardVector.Cross(OutHitNormal);
 	FVector NormalizedSnowboardNormalCross = SnowboardNormalCross.GetSafeNormal();
