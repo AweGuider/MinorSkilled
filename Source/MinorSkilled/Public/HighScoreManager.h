@@ -26,6 +26,10 @@ public:
 
     // Setter to set high score
     UFUNCTION(BlueprintCallable, Category = "Scores")
+    void RandomHighScore();  // Function to set random high score
+
+    // Setter to set high score
+    UFUNCTION(BlueprintCallable, Category = "Scores")
     void SetHighScore(int32 NewScore);  // Function to update high score
 
     // Updates high score

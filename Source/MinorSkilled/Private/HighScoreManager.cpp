@@ -12,7 +12,13 @@ UHighScoreManager::UHighScoreManager()
 void UHighScoreManager::Initialize()
 {
     // Load high score from a save file or initialize to a default value
+    RandomHighScore();  // Example random initialization
+}
+
+void UHighScoreManager::RandomHighScore()
+{
     HighScore = FMath::Rand() % 1000;  // Example random initialization
+
 }
 
 void UHighScoreManager::SetHighScore(int32 NewScore)

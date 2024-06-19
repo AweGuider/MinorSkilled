@@ -18,10 +18,10 @@ void AGrowingSnowball::BeginPlay()
 }
 
 // Called every frame
-void AGrowingSnowball::Tick(float DeltaTime)
-{
-    // Increase size over time
-    CurrentSize += DeltaTime;
-    SetActorScale3D(FVector(CurrentSize));
-}
+//void AGrowingSnowball::Tick(float DeltaTime)
+//{
+//    // Increase size over time
+//    //CurrentSize += DeltaTime;
+//    //SetActorScale3D(FVector(CurrentSize));
+//}
 
