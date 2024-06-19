@@ -3,17 +3,6 @@
 
 #include "HighScoreManager.h"
 
-UHighScoreManager* UHighScoreManager::GetInstance()
-{
-    if (!Instance)
-    {
-        Instance = NewObject<UHighScoreManager>();
-        Instance->AddToRoot();  // Prevent garbage collection
-        Instance->Initialize();
-    }
-    return Instance;
-}
-
 UHighScoreManager::UHighScoreManager()
 {
     //HighScore = 0;  // Default high score

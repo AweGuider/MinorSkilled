@@ -14,12 +14,10 @@ class MINORSKILLED_API UHighScoreManager : public UObject
 {
 	GENERATED_BODY()
 
-
+private:
 
 public:
-
-    UFUNCTION(BlueprintCallable, Category = "Scores")
-    static UHighScoreManager* GetInstance();  // Function to get instance of HighScoreManager
+    UHighScoreManager();
 
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Scores")
     int32 HighScore;
@@ -44,13 +42,4 @@ public:
     {
         return HighScore;
     };
-
-private:
-
-    static UHighScoreManager* Instance;  // Static instance of HighScoreManager
-
-    UHighScoreManager();
-
 };
-
-UHighScoreManager* UHighScoreManager::Instance = nullptr; // Initialize static instance to nullptr
