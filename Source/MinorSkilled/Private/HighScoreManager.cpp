@@ -41,6 +41,12 @@ void UHighScoreManager::SetHighScore(int32 NewScore)
     }
 }
 
+void UHighScoreManager::ResetHighScore()
+{
+
+    HighScore = 0;
+}
+
 
 void UHighScoreManager::UpdateHighScore(int32 ScoreChange)
 {
