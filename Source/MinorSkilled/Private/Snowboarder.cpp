@@ -79,21 +79,33 @@ void ASnowboarder::ProcessLineTrace(bool bHit, FVector HitNormal)
 // #TODO Aligning does not work
 void ASnowboarder::AlignSnowboardWithSlope(float DeltaTime)
 {
+
 	// Assuming 'this' is an Actor or has access to an Actor
 	AActor* MyActor = GetOwner();
 	if (!MyActor) return;
 
+	// Debugging values before using them
+	//UE_LOG(LogTemp, Warning, TEXT("OutHitNormal: %s, SnowboardForwardVector: %s"), *OutHitNormal.ToString(), *SnowboardForwardVector.ToString());
+
 	if (Grounded)
 	{
+
 		// #TODO Need to learn how to debug and check if code gets here
 		FRotator TargetRotation = UKismetMathLibrary::MakeRotFromZX(OutHitNormal, SnowboardForwardVector);
 
 		// Get current actor rotation
 		FRotator CurrentRotation = MyActor->GetActorRotation();
 
-		FRotator NewRotation = UKismetMathLibrary::RInterpTo(CurrentRotation, TargetRotation, DeltaTime, SnowboardRotationInterpSpeed);
+		FRotator NewRotation = UKismetMathLibrary::RInterpTo(CurrentRotation, TargetRotation, 1.0f, SnowboardRotationInterpSpeed);
 
 		MyActor->SetActorRotation(NewRotation);
+
+		UE_LOG(LogTemp, Warning, TEXT("Current Rotation: %s"), *CurrentRotation.ToString());
+
+		UE_LOG(LogTemp, Warning, TEXT("Target Rotation: %s"), *TargetRotation.ToString());
+
+		UE_LOG(LogTemp, Warning, TEXT("New Rotation: %s\n"), *NewRotation.ToString());
+
 	}
 }
 
