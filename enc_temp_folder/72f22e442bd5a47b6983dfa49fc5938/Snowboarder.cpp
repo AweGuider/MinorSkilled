@@ -100,11 +100,11 @@ void ASnowboarder::AlignSnowboardWithSlope(float DeltaTime)
 
 		MyActor->SetActorRotation(NewRotation);
 
-		//UE_LOG(LogTemp, Warning, TEXT("Current Rotation: %s"), *CurrentRotation.ToString());
+		UE_LOG(LogTemp, Warning, TEXT("Current Rotation: %s"), *CurrentRotation.ToString());
 
-		//UE_LOG(LogTemp, Warning, TEXT("Target Rotation: %s"), *TargetRotation.ToString());
+		UE_LOG(LogTemp, Warning, TEXT("Target Rotation: %s"), *TargetRotation.ToString());
 
-		//UE_LOG(LogTemp, Warning, TEXT("New Rotation: %s\n"), *NewRotation.ToString());
+		UE_LOG(LogTemp, Warning, TEXT("New Rotation: %s\n"), *NewRotation.ToString());
 
 	}
 }

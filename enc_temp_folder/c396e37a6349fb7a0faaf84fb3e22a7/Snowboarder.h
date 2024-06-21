@@ -43,9 +43,6 @@ public:
 #pragma region Debug
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Debug")
-		bool ShowDebug;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Debug")
 		FVector DebugArrowsOffset;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Debug")
